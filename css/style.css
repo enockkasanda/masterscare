@@ -1349,218 +1349,298 @@ footer p {
 }
 
 /* =========================================================
-RESPONSIVE — TABLET
+   RESPONSIVE — TABLET
 ========================================================= */
 
 @media (max-width: 1100px) {
 
-.nav-links {
-    gap: 18px;
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-contact {
+        padding: 10px 16px;
+    }
+
+    .about-block,
+    .ceo-section,
+    .industrial-recovery {
+        gap: 40px;
+    }
+
+    .technology-approach,
+    .quality-section,
+    .vacancies-section {
+        padding: 55px;
+    }
+
+    /* Prevent content from becoming too cramped */
+    .hero-content {
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
 }
 
-.nav-contact {
-    padding: 10px 16px;
-}
-
-.about-block,
-.ceo-section,
-.industrial-recovery {
-    gap: 50px;
-}
-
-.technology-approach,
-.quality-section,
-.vacancies-section {
-    padding: 55px;
-}
-
-}
 
 /* =========================================================
-RESPONSIVE — MOBILE NAVIGATION
+   RESPONSIVE — TABLET / MOBILE NAVIGATION
 ========================================================= */
 
 @media (max-width: 900px) {
 
-.nav-links {
-    display: none;
+    /* Hide desktop navigation */
+    .nav-links {
+        display: none;
+    }
+
+    .nav-contact,
+    .search-button,
+    .language-button {
+        display: none;
+    }
+
+    /* Navbar */
+    .navbar {
+        left: 4%;
+        right: 4%;
+    }
+
+    /* Hamburger button */
+    .mobile-menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        cursor: pointer;
+
+        border: none;
+        background: transparent;
+
+        z-index: 101;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+        position: fixed;
+
+        top: 90px;
+        left: 4%;
+        right: 4%;
+
+        z-index: 100;
+
+        padding: 20px;
+
+        background: white;
+
+        border-radius: 20px;
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+        display: none;
+    }
+
+    /* JavaScript will add this class */
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-menu a {
+        display: block;
+
+        padding: 14px;
+
+        border-bottom: 1px solid var(--border-light);
+
+        color: var(--green-dark);
+
+        font-size: 15px;
+
+        text-decoration: none;
+    }
+
+    .mobile-menu a:last-child {
+        border-bottom: none;
+    }
+
+
+    /* =====================================================
+       MOBILE/TABLET CONTENT
+    ===================================================== */
+
+    .about-block,
+    .ceo-section,
+    .industrial-recovery,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .energy-solutions-grid,
+    .recycling-process,
+    .careers-values {
+        grid-template-columns: 1fr;
+    }
+
+    .careers-value:last-child {
+        grid-column: auto;
+    }
+
+    .vacancies-section {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CEO */
+    .ceo-image {
+        width: 100%;
+    }
+
+    .ceo-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
 }
 
-.navbar {
-    left: 4%;
-    right: 4%;
-}
-
-.mobile-menu-button {
-    display: block;
-}
-
-.nav-contact {
-    display: none;
-}
-
-.search-button,
-.language-button {
-    display: none;
-}
-
-.mobile-menu {
-    position: fixed;
-
-    top: 90px;
-    left: 4%;
-    right: 4%;
-
-    z-index: 95;
-
-    padding: 20px;
-
-    background: white;
-
-    border-radius: 20px;
-
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-
-.mobile-menu a {
-    display: block;
-
-    padding: 14px;
-
-    border-bottom: 1px solid var(--border-light);
-
-    color: var(--green-dark);
-
-    font-size: 15px;
-}
-
-.mobile-menu a:last-child {
-    border-bottom: none;
-}
-
-.about-block,
-.ceo-section,
-.industrial-recovery,
-.contact-layout {
-    grid-template-columns: 1fr;
-}
-
-.energy-solutions-grid,
-.recycling-process,
-.careers-values {
-    grid-template-columns: 1fr;
-}
-
-.careers-value:last-child {
-    grid-column: auto;
-}
-
-.vacancies-section {
-    grid-template-columns: 1fr;
-}
-
-}
 
 /* =========================================================
-RESPONSIVE — SMALL MOBILE
+   RESPONSIVE — SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
 
-.navbar {
-    top: 15px;
+    /* Navbar */
 
-    padding: 10px 14px;
-}
+    .navbar {
+        top: 15px;
 
-.logo img {
-    width: 120px;
-}
+        padding: 10px 14px;
+    }
 
-.hero-content {
-    margin-left: 6%;
-    margin-right: 6%;
+    .logo img {
+        width: 120px;
+    }
 
-    padding-top: 100px;
-}
+    .mobile-menu-button {
+        width: 40px;
+        height: 40px;
+    }
 
-.hero h1 {
-    font-size: 45px;
 
-    letter-spacing: -2px;
-}
+    /* =====================================================
+       HERO
+    ===================================================== */
 
-.hero-description {
-    font-size: 15px;
-}
+    .hero-content {
+        margin-left: 6%;
+        margin-right: 6%;
 
-.hero-buttons {
-    flex-direction: column;
+        padding-top: 100px;
+    }
 
-    align-items: flex-start;
-}
+    .hero h1 {
+        font-size: 45px;
 
-.about-section,
-.energy-section,
-.waste-section,
-.careers-section,
-.contact-section {
-    padding: 80px 6%;
-}
+        letter-spacing: -2px;
+    }
 
-.section-heading {
-    margin-bottom: 50px;
-}
+    .hero-description {
+        font-size: 15px;
+    }
 
-.about-block {
-    padding: 50px 0;
-}
+    .hero-buttons {
+        flex-direction: column;
 
-.ceo-section {
-    padding: 60px 0;
-}
+        align-items: flex-start;
 
-.ceo-image,
-.industrial-image {
-    min-height: 400px;
-}
+        width: 100%;
+    }
 
-.values-grid {
-    grid-template-columns: 1fr;
 
-    padding-bottom: 60px;
-}
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
 
-.value-card,
-.careers-value {
-    padding: 30px;
-}
+    .about-section,
+    .energy-section,
+    .waste-section,
+    .careers-section,
+    .contact-section {
+        padding: 70px 6%;
+    }
 
-.technology-approach,
-.quality-section,
-.vacancies-section {
-    padding: 35px 25px;
-}
+    .section-heading {
+        margin-bottom: 45px;
+    }
 
-.energy-card > img,
-.process-card > img {
-    height: 250px;
-}
+    .about-block {
+        padding: 50px 0;
+    }
 
-.contact-form-container {
-    padding: 60px 20px;
-}
+    .ceo-section {
+        padding: 60px 0;
+    }
 
-.form-row {
-    grid-template-columns: 1fr;
-    gap: 0;
-}
+    .ceo-image {
+        min-height: auto;
+    }
 
-footer {
-    flex-direction: column;
 
-    text-align: left;
-}
+    /* =====================================================
+       CARDS
+    ===================================================== */
 
+    .values-grid {
+        grid-template-columns: 1fr;
+
+        padding-bottom: 60px;
+    }
+
+    .value-card,
+    .careers-value {
+        padding: 30px;
+    }
+
+    .technology-approach,
+    .quality-section,
+    .vacancies-section {
+        padding: 35px 25px;
+    }
+
+    .energy-card > img,
+    .process-card > img {
+        height: 250px;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact-form-container {
+        padding: 50px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        flex-direction: column;
+
+        text-align: left;
+    }
 
 }
