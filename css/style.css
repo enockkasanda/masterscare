@@ -1310,7 +1310,19 @@ CONTACT
 
     cursor: pointer;
 }
+/* =========================================================
+CONTACT LOGO
+========================================================= */
 
+.contact-logo {
+    margin-bottom: 30px;
+}
+
+.contact-logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
 
 /* CONTACT DETAILS */
 
